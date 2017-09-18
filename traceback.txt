@@ -1,0 +1,27 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 6, in script
+    image nater normal = ""
+Exception: An empty string cannot be used as a displayable.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "C:\Users\user\Software\renpy-6.99.11-sdk\renpy\bootstrap.py", line 295, in bootstrap
+    renpy.main.main()
+  File "C:\Users\user\Software\renpy-6.99.11-sdk\renpy\main.py", line 419, in main
+    game.context().run(node)
+  File "game/script.rpy", line 6, in script
+    image nater normal = ""
+  File "C:\Users\user\Software\renpy-6.99.11-sdk\renpy\ast.py", line 911, in execute
+    renpy.exports.image(self.imgname, img)
+  File "C:\Users\user\Software\renpy-6.99.11-sdk\renpy\exports.py", line 347, in image
+    d = renpy.easy.displayable(d)
+  File "C:\Users\user\Software\renpy-6.99.11-sdk\renpy\easy.py", line 85, in displayable
+    raise Exception("An empty string cannot be used as a displayable.")
+Exception: An empty string cannot be used as a displayable.
+
+Windows-8-6.2.9200
+Ren'Py 6.99.12.4.2187
+BloodyCrownDog_InRenpy 1.0
