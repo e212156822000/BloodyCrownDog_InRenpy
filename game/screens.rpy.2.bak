@@ -1341,49 +1341,14 @@ screen nvl_dialogue(dialogue):
 
 ## User making ####################################################################
 
-screen profile(who):
+screen hello_world():
+     tag example
+     zorder 1
+     modal False
 
-    style_prefix "profile"
-    zorder 1
-    modal False
-    frame:
-        xfill True
-        yfill True
-        imagebutton auto "gui/exit_%s.png" xalign 0.93 yalign 0.08 action Hide('profile')
-        vbox:
-            hbox:
-                id "profile_picture" 
-                add "images/[who]/profile.jpg"
-                vbox:
-                    text "[who]" size 40
-                    text "好感度"
-                    bar range 100 value 50:
-                        xmaximum 400
-                        ymaximum 10
-                        xpos 50
-                        left_bar Frame("gui/bar/profile_left.png")
-                        right_bar Frame("gui/bar/profile_right.png")
-                    text "人物描述"
-                    text "納丘的跟屁蟲" first_indent 100
-            hbox:
-                text "成就解鎖："
-                # text "Hello, World.22" size 30
-                # text "Hello, World.23" size 30
+     text "Hello, World."
 
-style profile_text:
-    first_indent 50
-    size 30
-    justify True
-    color "#F47983"
 
-style profile_frame:
-    background "gui/pink1.png"
-
-style profile_vbox:
-    xalign 0.18
-    yalign 0.15
-    spacing 40
-    box_wrap True
 
 ## This controls the maximum number of NVL-mode entries that can be displayed at
 ## once.

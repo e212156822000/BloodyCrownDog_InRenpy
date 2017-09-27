@@ -1,26 +1,70 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 6, in script
-    image nater normal = ""
-Exception: An empty string cannot be used as a displayable.
+  File "game/script.rpy", line 44, in script
+    Nater "納希琳...還在睡啊？"
+  File "game/screens.rpy", line 1344, in execute
+    screen profile(who):
+  File "game/screens.rpy", line 1344, in execute
+    screen profile(who):
+  File "game/screens.rpy", line 1350, in execute
+    frame:
+  File "game/screens.rpy", line 1353, in execute
+    imagebutton auto "gui/exit_small.png" action Hide('profile')
+  File "renpy/common/00defaults.rpy", line 115, in _imagemap_auto_function
+    rv = auto_param % variant
+TypeError: not all arguments converted during string formatting
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "C:\Users\user\Software\renpy-6.99.11-sdk\renpy\bootstrap.py", line 295, in bootstrap
-    renpy.main.main()
-  File "C:\Users\user\Software\renpy-6.99.11-sdk\renpy\main.py", line 419, in main
-    game.context().run(node)
-  File "game/script.rpy", line 6, in script
-    image nater normal = ""
-  File "C:\Users\user\Software\renpy-6.99.11-sdk\renpy\ast.py", line 911, in execute
-    renpy.exports.image(self.imgname, img)
-  File "C:\Users\user\Software\renpy-6.99.11-sdk\renpy\exports.py", line 347, in image
-    d = renpy.easy.displayable(d)
-  File "C:\Users\user\Software\renpy-6.99.11-sdk\renpy\easy.py", line 85, in displayable
-    raise Exception("An empty string cannot be used as a displayable.")
-Exception: An empty string cannot be used as a displayable.
+  File "game/script.rpy", line 44, in script
+    Nater "納希琳...還在睡啊？"
+  File "C:\Users\user\Software\renpy-6.99.11-sdk\renpy\ast.py", line 613, in execute
+    renpy.exports.say(who, what, interact=self.interact)
+  File "C:\Users\user\Software\renpy-6.99.11-sdk\renpy\exports.py", line 1147, in say
+    who(what, interact=interact)
+  File "C:\Users\user\Software\renpy-6.99.11-sdk\renpy\character.py", line 877, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, **display_args)
+  File "C:\Users\user\Software\renpy-6.99.11-sdk\renpy\character.py", line 716, in do_display
+    **display_args)
+  File "C:\Users\user\Software\renpy-6.99.11-sdk\renpy\character.py", line 508, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "C:\Users\user\Software\renpy-6.99.11-sdk\renpy\ui.py", line 285, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\user\Software\renpy-6.99.11-sdk\renpy\display\core.py", line 2526, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
+  File "C:\Users\user\Software\renpy-6.99.11-sdk\renpy\display\core.py", line 2793, in interact_core
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "C:\Users\user\Software\renpy-6.99.11-sdk\renpy\display\core.py", line 495, in visit_all
+    d.visit_all(callback)
+  File "C:\Users\user\Software\renpy-6.99.11-sdk\renpy\display\core.py", line 495, in visit_all
+    d.visit_all(callback)
+  File "C:\Users\user\Software\renpy-6.99.11-sdk\renpy\display\core.py", line 495, in visit_all
+    d.visit_all(callback)
+  File "C:\Users\user\Software\renpy-6.99.11-sdk\renpy\display\screen.py", line 399, in visit_all
+    callback(self)
+  File "C:\Users\user\Software\renpy-6.99.11-sdk\renpy\display\core.py", line 2793, in <lambda>
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "C:\Users\user\Software\renpy-6.99.11-sdk\renpy\display\screen.py", line 409, in per_interact
+    self.update()
+  File "C:\Users\user\Software\renpy-6.99.11-sdk\renpy\display\screen.py", line 578, in update
+    self.screen.function(**self.scope)
+  File "game/screens.rpy", line 1344, in execute
+    screen profile(who):
+  File "game/screens.rpy", line 1344, in execute
+    screen profile(who):
+  File "game/screens.rpy", line 1350, in execute
+    frame:
+  File "game/screens.rpy", line 1353, in execute
+    imagebutton auto "gui/exit_small.png" action Hide('profile')
+  File "C:\Users\user\Software\renpy-6.99.11-sdk\renpy\ui.py", line 912, in _imagebutton
+    idle = choice(idle, idle_image, "idle", required=True)
+  File "C:\Users\user\Software\renpy-6.99.11-sdk\renpy\ui.py", line 905, in choice
+    return renpy.config.imagemap_auto_function(auto, name)
+  File "renpy/common/00defaults.rpy", line 115, in _imagemap_auto_function
+    rv = auto_param % variant
+TypeError: not all arguments converted during string formatting
 
 Windows-8-6.2.9200
 Ren'Py 6.99.12.4.2187

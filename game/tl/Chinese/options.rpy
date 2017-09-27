@@ -4,5 +4,5 @@ translate Chinese strings:
 
     # options.rpy:15
     old "BloodyCrownDog_InRenpy"
-    new ""
+    new "冠之狗血"
 

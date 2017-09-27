@@ -192,11 +192,11 @@ translate Chinese strings:
 
     # 00gui.rpy:238
     old "Are you sure you want to quit?"
-    new ""
+    new "確定要離開嗎？"
 
     # 00gui.rpy:239
     old "Are you sure you want to return to the main menu?\nThis will lose unsaved progress."
-    new ""
+    new "確定要回到主畫面？這會使你丟失遊戲進度。"
 
     # 00gui.rpy:240
     old "Are you sure you want to end the replay?"
